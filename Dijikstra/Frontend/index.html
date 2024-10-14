@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijkstra's Algorithm Visualizer</title>
+
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" 
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-header text-center bg-primary text-white">
+                <h2>Dijkstra's Algorithm Visualizer</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="graphInput" class="form-label">Enter Graph (JSON)</label>
+                    <textarea id="graphInput" class="form-control" rows="5" 
+                              placeholder='e.g., {"A": {"B": 1, "C": 4}, "B": {"D": 5}}'></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="startNode" class="form-label">Start Node</label>
+                    <input type="text" id="startNode" class="form-control" placeholder="Enter Start Node">
+                </div>
+                <div class="d-grid">
+                    <button onclick="findShortestPath()" class="btn btn-success">
+                        Find Shortest Path
+                    </button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h5>Result:</h5>
+                <pre id="result" class="p-3 bg-light rounded"></pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
